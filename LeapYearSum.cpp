@@ -11,16 +11,13 @@ int main() {
 		return 0;
 	}
 	string temp = to_string(year);
-	total += int(temp[0])-48;
-	total += int(temp[1])-48;
-	total += int(temp[2])-48;
-	total += int(temp[3])-48;
+	for (int i = 0; i < 4; i++) {
+		total += int(temp[i]) - 48;
+	}
 	if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
 		cout << year << " is a leap year! \n" << temp[0] << " + " << temp[1] << " + " << temp[2] << " + " << temp[3] << " = " << total;
 	else
 		cout << year << " is not a leap year!";
-	
-	
 	
 }
 /*
